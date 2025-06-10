@@ -27,4 +27,4 @@ db.createCollection("Certificados");
 
 //Inserción de datos (100 registros en la BD).
 
-//1-Inserción colección Usuarios
+//1-Inserción colección Usuarios jashdajk
