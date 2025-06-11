@@ -48,7 +48,7 @@ db.Cursos.InsertMany([{
     duracionEstimada:"string",
     lecciones:["ObjectID"]/*Orden de las lecciones referencia a la colección Lecciones */,
     evaluaciones:["ObjectID"]/*Referencias a la colección Evaluaciones */,
-    recursosAdicionales:["Object"]/*Arrau con información sobre archivos adjuntos, enlaces, etc */,
+    recursosAdicionales:["Object"]/*Array con información sobre archivos adjuntos, enlaces, etc */,
     estudiantesInscritos:"Number"/*Estadisticas rápidas se puede obtener contando en la colección Usuarios */,
     calificacionPromedio:"Number"
 }])
