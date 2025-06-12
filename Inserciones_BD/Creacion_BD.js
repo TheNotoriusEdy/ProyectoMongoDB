@@ -7,7 +7,7 @@ db.createCollection("Usuarios");
 //2-Colección Suscripciones
 db.createCollection("Suscripciones");
 //3-Colección Suscripción
-db.createCollection("Suscripción");
+db.createCollection("Planes Suscripción");
 //4-Colección Preguntas
 db.createCollection("Preguntas");
 //5-Colección Lecciones
