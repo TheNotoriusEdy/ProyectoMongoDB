@@ -1,3 +1,25 @@
+//Contar el total de documentos en todas las colecciones de la base de datos actual
+/*Esta consulta esta hecha para saber de manera sencilla y rápida cuantos recursos tenemos
+repartidos por toda la BD.
+*/
+let totalDocumentos = 0;
+const colecciones = db.getCollectionNames(); // Obtener los nombres de todas las colecciones
+
+print("--- Conteo de Documentos por Colección ---");
+for (let i = 0; i < colecciones.length; i++) {
+  const nombreColeccion = colecciones[i];
+  // Excluir colecciones del sistema si no deseas contarlas
+  if (nombreColeccion.startsWith("system.")) {
+    continue;
+  }
+  const conteo = db[nombreColeccion].countDocuments({}); // Contar documentos en la colección actual
+  print(`Colección: ${nombreColeccion} - Documentos: ${conteo}`);
+  totalDocumentos += conteo;
+}
+
+print("---------------------------------------");
+print(`Total de documentos en la BD: ${totalDocumentos}`);
+
 // 1. Contar el número total de usuarios por rol
 db.Usuarios.aggregate([
   {
